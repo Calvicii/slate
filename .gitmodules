@@ -1,0 +1,4 @@
+[submodule "system_files/shared/usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io"]
+    path = system_files/shared/usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io
+    url = https://github.com/bazaar-org/bazaar-companion.git
+    branch = main

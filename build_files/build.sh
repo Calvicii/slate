@@ -118,6 +118,11 @@ dnf -y remove "${REMOVED_PACKAGES[@]}"
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+### GNOME Extensions
+
+# Bazaar Companion
+mv /usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io/src/ /usr/share/gnome-shell/extensions/bazaar-integration@kolunmi.github.io/
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
