@@ -122,6 +122,7 @@ dnf -y remove "${REMOVED_PACKAGES[@]}"
 
 # Bazaar Companion
 mv /usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io/src/ /usr/share/gnome-shell/extensions/bazaar-integration@kolunmi.github.io/
+system_files/shared/usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io/src
 
 #### Example for enabling a System Unit File
 
