@@ -121,6 +121,11 @@ dnf -y remove "${REMOVED_PACKAGES[@]}"
 
 ### GNOME Extensions
 
+echo "Checking Bazaar extension files..."
+ls -la /usr/share/gnome-shell/extensions/tmp/
+ls -la /usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io/
+ls -la /usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io/src/
+
 # Bazaar Companion
 mv /usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io/src/ /usr/share/gnome-shell/extensions/bazaar-integration@kolunmi.github.io/
 
