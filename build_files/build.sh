@@ -22,7 +22,7 @@ sed -i "/^REDHAT_BUGZILLA_PRODUCT=/d; /^REDHAT_BUGZILLA_PRODUCT_VERSION=/d; /^RE
 sed -i "s|^EFIDIR=.*|EFIDIR=\"fedora\"|" /usr/sbin/grub2-switch-to-blscfg
 
 # Copy the contents of system_files/ of the git repo to /
-rsync -rvK /ctx/system_files/shared/ /
+rsync -rvK /ctx/system_files/ /
 
 ### Install packages
 
