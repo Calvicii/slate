@@ -1,7 +1,7 @@
 org.gnome.Epiphany
 app.devsuite.Ptyxis
 io.github.kolunmi.Bazaar
-io.missioncenter.MissionCenter
+net.nokyan.Resources
 com.mattjakeman.ExtensionManager
 org.gnome.Calendar
 org.gnome.Contacts
@@ -15,3 +15,4 @@ org.gnome.Showtime
 org.gnome.Decibels
 org.gnome.Papers
 page.tesk.Refine
+com.github.tchx84.Flatseal

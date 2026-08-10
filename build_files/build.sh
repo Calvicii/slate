@@ -2,8 +2,26 @@
 
 set -ouex pipefail
 
+IMAGE_PRETTY_NAME="Slate"
+IMAGE_LIKE="fedora"
+HOME_URL="https://github.com/calvicii/slate"
+DOCUMENTATION_URL="https://github.com/calvicii/slate"
+SUPPORT_URL="https://github.com/calvicii/slate/issues"
+BUG_SUPPORT_URL="https://github.com/calvicii/slate/issues"
+
+sed -i "s|^PRETTY_NAME=.*|PRETTY_NAME=\"${IMAGE_PRETTY_NAME}\"|" /usr/lib/os-release
+sed -i "s|^NAME=.*|NAME=\"$IMAGE_PRETTY_NAME\"|" /usr/lib/os-release
+sed -i "s|^HOME_URL=.*|HOME_URL=\"$HOME_URL\"|" /usr/lib/os-release
+sed -i "s|^DOCUMENTATION_URL=.*|DOCUMENTATION_URL=\"$DOCUMENTATION_URL\"|" /usr/lib/os-release
+sed -i "s|^SUPPORT_URL=.*|SUPPORT_URL=\"$SUPPORT_URL\"|" /usr/lib/os-release
+sed -i "s|^BUG_REPORT_URL=.*|BUG_REPORT_URL=\"$BUG_SUPPORT_URL\"|" /usr/lib/os-release
+sed -i "s|^ID=fedora|ID=slate\nID_LIKE=\"fedora\"|" /usr/lib/os-release
+sed -i "/^REDHAT_BUGZILLA_PRODUCT=/d; /^REDHAT_BUGZILLA_PRODUCT_VERSION=/d; /^REDHAT_SUPPORT_PRODUCT=/d; /^REDHAT_SUPPORT_PRODUCT_VERSION=/d" /usr/lib/os-release
+
+# Fix issues caused by ID no longer being fedora
+sed -i "s|^EFIDIR=.*|EFIDIR=\"fedora\"|" /usr/sbin/grub2-switch-to-blscfg
+
 # Copy the contents of system_files/ of the git repo to /
-# cp -avf "/ctx/system_files"/. /
 rsync -rvK /ctx/system_files/shared/ /
 
 ### Install packages
@@ -29,7 +47,6 @@ FEDORA_PACKAGES=(
     ddcutil
     evtest
     fastfetch
-    firewall-config
     fish
     foo2zjs
     fuse-encfs
@@ -129,6 +146,8 @@ ls -la /usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.i
 # Bazaar Companion
 mv /usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io/src/ /usr/share/gnome-shell/extensions/bazaar-integration@kolunmi.github.io/
 
-#### Example for enabling a System Unit File
+### Services
 
 systemctl enable podman.socket
+systemctl enable flatpak-preinstall.service
+systemctl enable bazaar.service
