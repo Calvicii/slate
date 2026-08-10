@@ -2,8 +2,8 @@
 
 set -ouex pipefail
 
+# Branding
 IMAGE_PRETTY_NAME="Slate"
-IMAGE_LIKE="fedora"
 HOME_URL="https://github.com/calvicii/slate"
 DOCUMENTATION_URL="https://github.com/calvicii/slate"
 SUPPORT_URL="https://github.com/calvicii/slate/issues"
@@ -15,7 +15,6 @@ sed -i "s|^HOME_URL=.*|HOME_URL=\"$HOME_URL\"|" /usr/lib/os-release
 sed -i "s|^DOCUMENTATION_URL=.*|DOCUMENTATION_URL=\"$DOCUMENTATION_URL\"|" /usr/lib/os-release
 sed -i "s|^SUPPORT_URL=.*|SUPPORT_URL=\"$SUPPORT_URL\"|" /usr/lib/os-release
 sed -i "s|^BUG_REPORT_URL=.*|BUG_REPORT_URL=\"$BUG_SUPPORT_URL\"|" /usr/lib/os-release
-sed -i "s|^ID=fedora|ID=slate\nID_LIKE=\"fedora\"|" /usr/lib/os-release
 sed -i "/^REDHAT_BUGZILLA_PRODUCT=/d; /^REDHAT_BUGZILLA_PRODUCT_VERSION=/d; /^REDHAT_SUPPORT_PRODUCT=/d; /^REDHAT_SUPPORT_PRODUCT_VERSION=/d" /usr/lib/os-release
 
 # Fix issues caused by ID no longer being fedora
