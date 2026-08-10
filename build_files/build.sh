@@ -150,4 +150,3 @@ mv /usr/share/gnome-shell/extensions/tmp/bazaar-integration@kolunmi.github.io/sr
 
 systemctl enable podman.socket
 systemctl enable flatpak-preinstall.service
-systemctl --global enable bazaar.service
