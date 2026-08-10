@@ -1,0 +1,12 @@
+[Unit]
+Description=Install OS-defined preinstalled Flatpaks
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flatpak preinstall -y
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
