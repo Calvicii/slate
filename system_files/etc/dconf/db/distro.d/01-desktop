@@ -10,4 +10,4 @@ apps=['org.gnome.DiskUtility', 'org.freedesktop.MalcontentControl', 'io.gitlab.a
 
 [org/gnome/desktop/app-folders/folders/Customization]
 name='Customization'
-apps=['com.mattjakeman.ExtensionManager', 'page.tesk.Refine']
+apps=['com.mattjakeman.ExtensionManager', 'page.tesk.Refine', 'com.github.tchx84.Flatseal']
