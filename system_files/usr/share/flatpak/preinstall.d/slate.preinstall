@@ -69,3 +69,7 @@ IsRuntime=false
 [Flatpak Preinstall com.github.tchx84.Flatseal]
 Branch=stable
 IsRuntime=false
+
+[Flatpak Preinstall io.gitlab.adhami3310.Impression]
+Branch=stable
+IsRuntime=false
