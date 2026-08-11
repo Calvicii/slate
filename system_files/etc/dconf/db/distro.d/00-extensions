@@ -1,0 +1,2 @@
+[org/gnome/shell]
+enabled-extensions=["bazaar-integration@kolunmi.github.io"]
