@@ -1,0 +1,13 @@
+[org/gnome/shell]
+favorite-apps=['org.gnome.Nautilus.desktop', 'app.devsuite.Ptyxis.desktop', 'org.gnome.Epiphany.desktop']
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'Customization']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+name='Utilities'
+apps=['org.gnome.DiskUtility', 'org.freedesktop.MalcontentControl', 'io.gitlab.adhami3310.Impression', 'net.nokyan.Resources']
+
+[org/gnome/desktop/app-folders/folders/Customization]
+name='Customization'
+apps=['com.mattjakeman.ExtensionManager', 'page.tesk.Refine']
