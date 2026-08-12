@@ -73,3 +73,7 @@ IsRuntime=false
 [Flatpak Preinstall io.gitlab.adhami3310.Impression]
 Branch=stable
 IsRuntime=false
+
+[Flatpak Preinstall org.gnome.TextEditor]
+Branch=stable
+IsRuntime=false
